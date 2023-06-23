@@ -21,5 +21,7 @@
     "webpack-dev-server": "4.13.3",
     "webpack-livereload-plugin": "3.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@module-federation/utilities": "^1.8.0"
+  }
 }

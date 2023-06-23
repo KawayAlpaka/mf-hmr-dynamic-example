@@ -1,6 +1,6 @@
 # 总结
 - 这个示例中，react等组件也必须启动开发环境才能实现remote的热更新（host则不需要）
-- 
+- 动态引入的remote2，没能实现热更新
 
 
 # Module Federation with Webpack 5 in React
