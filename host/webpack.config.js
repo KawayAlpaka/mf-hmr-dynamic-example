@@ -42,6 +42,7 @@ module.exports = {
       name: 'host',
       remotes: {
         remote1: 'remote1@[remote1Url]/remoteEntry.js',
+        remote2: 'remote2@[remote2Url]/remoteEntry.js',
         libs: 'libs@[libsUrl]/remoteEntry.js',
       },
     }),

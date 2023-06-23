@@ -1,8 +1,7 @@
 import React from 'libs/react';
-import { importRemote } from '@module-federation/utilities/src/utils/importRemote';
-
-
-
+// import { importRemote } from '@module-federation/utilities/src/utils/importRemote';
+import RemoteApp from 'remote2/App'
+// const RemoteApp = React.lazy(() => import('remote2/App'))
 
 function System(props) {
   const {
@@ -14,11 +13,15 @@ function System(props) {
     return <h2>No system specified</h2>;
   }
 
-  const Component = React.lazy(() => importRemote({ url, scope, module }));
+  // const Component = React.lazy(() => importRemote({ url, scope, module }));\
+  
+  /* 常规的异步引入方式，也不能热更新 */
+  // const Component = React.lazy(() => import('remote2/App'));
 
   return (
     <React.Suspense fallback="Loading System">
-      <Component />
+      {/* <Component /> */}
+      <RemoteApp />
     </React.Suspense>
   );
 }
