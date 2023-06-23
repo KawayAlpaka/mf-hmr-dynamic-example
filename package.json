@@ -4,6 +4,7 @@
   "workspaces": [
     "./libs",
     "./remote1",
+    "./remote2",
     "./host"
   ],
   "version": "1.0.0",
