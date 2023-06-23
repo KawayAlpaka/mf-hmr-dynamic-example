@@ -1,3 +1,8 @@
+# 总结
+- 这个示例中，react等组件也必须启动开发环境才能实现remote的热更新（host则不需要）
+- 
+
+
 # Module Federation with Webpack 5 in React
 
 This repo uses Webpack5 Module Federation plugin to build a React microfrontend

@@ -2,11 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 const path = require('path');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
+// const LiveReloadPlugin = require('webpack-livereload-plugin');
+
+// console.log(process.env)
 
 module.exports = {
   entry: './src/index',
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   optimization: {
     minimize: false,
@@ -47,8 +49,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new LiveReloadPlugin({
-      port: 35729,
-    }),
+    // new LiveReloadPlugin({
+    //   port: 35729,
+    // }),
   ],
 };
