@@ -1,27 +1,19 @@
 import React from 'libs/react';
-// import { importRemote } from '@module-federation/utilities/src/utils/importRemote';
-import RemoteApp from 'remote2/App'
-// const RemoteApp = React.lazy(() => import('remote2/App'))
+import { importRemote } from '@module-federation/utilities/src/utils/importRemote';
 
-function System(props) {
-  const {
-    system,
-    system: { url, scope, module },
-  } = props;
+// this would make HMR work
+// import Button2 from 'remote2/Button';
 
-  if (!system || !url || !scope || !module) {
-    return <h2>No system specified</h2>;
-  }
-
-  // const Component = React.lazy(() => importRemote({ url, scope, module }));\
-  
-  /* 常规的异步引入方式，也不能热更新 */
-  // const Component = React.lazy(() => import('remote2/App'));
+function System() {
+  const Component = React.lazy(() => importRemote({
+    url: "http://localhost:3003",
+    scope:"remote2", 
+    module:"./App"
+  }));
 
   return (
     <React.Suspense fallback="Loading System">
-      {/* <Component /> */}
-      <RemoteApp />
+      <Component />
     </React.Suspense>
   );
 }

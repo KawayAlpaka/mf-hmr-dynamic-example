@@ -42,6 +42,7 @@ module.exports = {
       name: 'remote1',
       filename: 'remoteEntry.js',
       exposes: {
+        './App': './src/App',
         './Button': './src/Button',
         './Heading': './src/Heading',
       },
